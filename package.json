@@ -29,5 +29,22 @@
 		"typescript": "^5.0.0",
 		"typescript-eslint": "^8.20.0",
 		"vite": "^5.4.11"
+	},
+	"dependencies": {
+		"@ember-data/codemods": "^5.4.6",
+		"@ember-data/graph": "5.4.0-alpha.134",
+		"@ember-data/json-api": "5.4.0-alpha.134",
+		"@ember-data/model": "5.4.0-alpha.134",
+		"@ember-data/request": "5.4.0-alpha.134",
+		"@ember-data/request-utils": "5.4.0-alpha.134",
+		"@ember-data/rest": "^5.3.10",
+		"@ember-data/store": "5.4.0-alpha.134",
+		"@ember-data/tracking": "5.4.0-alpha.134",
+		"@warp-drive/build-config": "^0.0.0",
+		"@warp-drive/diagnostic": "0.0.0-alpha.120",
+		"@warp-drive/experiments": "0.1.0-alpha.134",
+		"@warp-drive/holodeck": "0.0.0-alpha.120",
+		"@warp-drive/schema-record": "^0.0.0",
+		"eslint-plugin-warp-drive": "0.0.2-alpha.119"
 	}
 }
