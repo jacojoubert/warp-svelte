@@ -1,7 +1,11 @@
 import { buildMacros } from '@embroider/macros/babel';
-console.log(buildMacros);
+import { setConfig } from '@warp-drive/build-config';
 
 const builtMacros = buildMacros({
+	configure(m) {
+		setConfig(m, './', { ___legacy_support: false });
+	},
+
 	// this is how you configure your own package
 	setOwnConfig: {
 		// your config goes here
