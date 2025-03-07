@@ -40,6 +40,7 @@
 		"@ember-data/rest": "^5.3.10",
 		"@ember-data/store": "5.4.0-alpha.134",
 		"@ember-data/tracking": "5.4.0-alpha.134",
+		"@embroider/macros": "1.17.0-alpha.5",
 		"@warp-drive/build-config": "^0.0.0",
 		"@warp-drive/diagnostic": "0.0.0-alpha.120",
 		"@warp-drive/experiments": "0.1.0-alpha.134",

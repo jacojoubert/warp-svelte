@@ -35,6 +35,9 @@ importers:
       '@ember-data/tracking':
         specifier: 5.4.0-alpha.134
         version: 5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1))
+      '@embroider/macros':
+        specifier: 1.17.0-alpha.5
+        version: 1.17.0-alpha.5
       '@warp-drive/build-config':
         specifier: ^0.0.0
         version: 0.0.0
@@ -819,8 +822,17 @@ packages:
     resolution: {integrity: sha512-fMzayl/licUL8VRAy4qXROKcYvHwUbV8aTh4m97L5/MRuVpxbcAy92DGGTqx5OBKCSQN3gMg+sUKeE6AviefpQ==}
     engines: {node: 12.* || 14.* || >= 16}
 
-  '@embroider/macros@1.16.10':
-    resolution: {integrity: sha512-G0vCsKgNCX0PMmuVNsTLG7IYXz8VkekQMK4Kcllzqpwb7ivFRDwVx2bD4QSvZ9LCTd4eWQ654RsCqVbW5aviww==}
+  '@embroider/macros@1.16.11':
+    resolution: {integrity: sha512-TUm/74oBr+tWto0IPAht1g6zjpP7UK0aQdnFHHqGvDPc+tAROQb9jKI/ePEuKAdBCV3L7XvvC4Rlf0DNvT4qmw==}
+    engines: {node: 12.* || 14.* || >= 16}
+    peerDependencies:
+      '@glint/template': ^1.0.0
+    peerDependenciesMeta:
+      '@glint/template':
+        optional: true
+
+  '@embroider/macros@1.17.0-alpha.5':
+    resolution: {integrity: sha512-NZCGBk/W2j1/SGgZuFwAI9OAqQj0kDofqv+mXAYAF3JOwuHLQO6HQg1p4KixxtFyQB/NyugcR1dwJ37FEpS+Ng==}
     engines: {node: 12.* || 14.* || >= 16}
     peerDependencies:
       '@glint/template': ^1.0.0
@@ -830,6 +842,14 @@ packages:
 
   '@embroider/shared-internals@2.8.1':
     resolution: {integrity: sha512-zi0CENFD1e0DH7c9M/rNKJnFnt2c3+736J3lguBddZdmaIV6Cb8l3HQSkskSW5O4ady+SavemLKO3hCjQQJBIw==}
+    engines: {node: 12.* || 14.* || >= 16}
+
+  '@embroider/shared-internals@2.9.0':
+    resolution: {integrity: sha512-8untWEvGy6av/oYibqZWMz/yB+LHsKxEOoUZiLvcpFwWj2Sipc0DcXeTJQZQZ++otNkLCWyDrDhOLrOkgjOPSg==}
+    engines: {node: 12.* || 14.* || >= 16}
+
+  '@embroider/shared-internals@3.0.0-alpha.3':
+    resolution: {integrity: sha512-ZW7QCrKmqbqtfXigEapAsJcFtsnduxyQp4O3o3uxtR0oCKpbm3Cyh/xjaq+NlO3OC2JCmLsPO5BjPG4n4xq5Ig==}
     engines: {node: 12.* || 14.* || >= 16}
 
   '@esbuild/aix-ppc64@0.21.5':
@@ -3231,6 +3251,10 @@ packages:
     resolution: {integrity: sha512-SRpNAPW4kewOaNUt8VPqhJ0UMxawMwzJD8V7m1cJfdSTK9ieZwS6K7Dabsm4bmLFM96Z5Y/UznrpG5kt1im8yA==}
     engines: {node: '>= 12'}
 
+  resolve.exports@2.0.3:
+    resolution: {integrity: sha512-OcXjMsGdhL4XnbShKpAcSqPMzQoYkYyhbEaeSko47MjRP9NfEQMhZkXL1DoFlt9LWQn4YttrdnV6X2OiyzBi+A==}
+    engines: {node: '>=10'}
+
   resolve@1.22.10:
     resolution: {integrity: sha512-NPRy+/ncIMeDlTAsuqwKIiferiawhefFJtkNSW0qZJEqMEb+qBt/77B/jGeeek+F0uOeN05CDa6HXbbIgtVX4w==}
     engines: {node: '>= 0.4'}
@@ -4585,7 +4609,7 @@ snapshots:
   '@ember-data/graph@5.4.0-alpha.134(@ember-data/store@5.4.0-alpha.134(@ember-data/request-utils@5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)))(@ember-data/request@5.4.0-alpha.134(@warp-drive/core-types@0.0.0))(@ember-data/tracking@5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)))(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)))(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1))':
     dependencies:
       '@ember-data/store': 5.4.0-alpha.134(@ember-data/request-utils@5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)))(@ember-data/request@5.4.0-alpha.134(@warp-drive/core-types@0.0.0))(@ember-data/tracking@5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)))(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1))
-      '@embroider/macros': 1.16.10
+      '@embroider/macros': 1.16.11
       '@warp-drive/build-config': 5.4.0-alpha.134
       '@warp-drive/core-types': 0.0.0
       ember-source: 6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)
@@ -4598,7 +4622,7 @@ snapshots:
       '@ember-data/graph': 5.4.0-alpha.134(@ember-data/store@5.4.0-alpha.134(@ember-data/request-utils@5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)))(@ember-data/request@5.4.0-alpha.134(@warp-drive/core-types@0.0.0))(@ember-data/tracking@5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)))(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)))(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1))
       '@ember-data/request-utils': 5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1))
       '@ember-data/store': 5.4.0-alpha.134(@ember-data/request-utils@5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)))(@ember-data/request@5.4.0-alpha.134(@warp-drive/core-types@0.0.0))(@ember-data/tracking@5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)))(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1))
-      '@embroider/macros': 1.16.10
+      '@embroider/macros': 1.16.11
       '@warp-drive/build-config': 5.4.0-alpha.134
       '@warp-drive/core-types': 0.0.0
     transitivePeerDependencies:
@@ -4611,7 +4635,7 @@ snapshots:
       '@ember-data/request-utils': 5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1))
       '@ember-data/store': 5.4.0-alpha.134(@ember-data/request-utils@5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)))(@ember-data/request@5.4.0-alpha.134(@warp-drive/core-types@0.0.0))(@ember-data/tracking@5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)))(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1))
       '@ember/test-waiters': 3.1.0
-      '@embroider/macros': 1.16.10
+      '@embroider/macros': 1.16.11
       '@warp-drive/build-config': 0.0.0-alpha.48
       '@warp-drive/core-types': 0.0.0
     optionalDependencies:
@@ -4628,7 +4652,7 @@ snapshots:
       '@ember-data/store': 5.4.0-alpha.134(@ember-data/request-utils@5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)))(@ember-data/request@5.4.0-alpha.134(@warp-drive/core-types@0.0.0))(@ember-data/tracking@5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)))(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1))
       '@ember-data/tracking': 5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1))
       '@ember/edition-utils': 1.2.0
-      '@embroider/macros': 1.16.10
+      '@embroider/macros': 1.16.11
       '@warp-drive/build-config': 5.4.0-alpha.134
       '@warp-drive/core-types': 0.0.0
       ember-cli-string-utils: 1.1.0
@@ -4644,7 +4668,7 @@ snapshots:
 
   '@ember-data/request-utils@5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1))':
     dependencies:
-      '@embroider/macros': 1.16.10
+      '@embroider/macros': 1.16.11
       '@warp-drive/build-config': 5.4.0-alpha.134
       '@warp-drive/core-types': 0.0.0
       ember-source: 6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)
@@ -4655,7 +4679,7 @@ snapshots:
   '@ember-data/request@5.4.0-alpha.134(@warp-drive/core-types@0.0.0)':
     dependencies:
       '@ember/test-waiters': 3.1.0
-      '@embroider/macros': 1.16.10
+      '@embroider/macros': 1.16.11
       '@warp-drive/build-config': 5.4.0-alpha.134
       '@warp-drive/core-types': 0.0.0
     transitivePeerDependencies:
@@ -4666,7 +4690,7 @@ snapshots:
     dependencies:
       '@ember-data/request-utils': 5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1))
       '@ember-data/store': 5.4.0-alpha.134(@ember-data/request-utils@5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)))(@ember-data/request@5.4.0-alpha.134(@warp-drive/core-types@0.0.0))(@ember-data/tracking@5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)))(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1))
-      '@embroider/macros': 1.16.10
+      '@embroider/macros': 1.16.11
       '@warp-drive/build-config': 0.0.0
       '@warp-drive/core-types': 0.0.0
     transitivePeerDependencies:
@@ -4680,7 +4704,7 @@ snapshots:
       '@ember-data/request': 5.4.0-alpha.134(@warp-drive/core-types@0.0.0)
       '@ember-data/request-utils': 5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1))
       '@ember-data/tracking': 5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1))
-      '@embroider/macros': 1.16.10
+      '@embroider/macros': 1.16.11
       '@warp-drive/build-config': 5.4.0-alpha.134
       '@warp-drive/core-types': 0.0.0
       ember-source: 6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)
@@ -4690,7 +4714,7 @@ snapshots:
 
   '@ember-data/tracking@5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1))':
     dependencies:
-      '@embroider/macros': 1.16.10
+      '@embroider/macros': 1.16.11
       '@warp-drive/build-config': 5.4.0-alpha.134
       '@warp-drive/core-types': 0.0.0
       ember-source: 6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)
@@ -4718,9 +4742,22 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@embroider/macros@1.16.10':
+  '@embroider/macros@1.16.11':
     dependencies:
-      '@embroider/shared-internals': 2.8.1
+      '@embroider/shared-internals': 2.9.0
+      assert-never: 1.4.0
+      babel-import-util: 2.1.1
+      ember-cli-babel: 7.26.11
+      find-up: 5.0.0
+      lodash: 4.17.21
+      resolve: 1.22.10
+      semver: 7.7.1
+    transitivePeerDependencies:
+      - supports-color
+
+  '@embroider/macros@1.17.0-alpha.5':
+    dependencies:
+      '@embroider/shared-internals': 3.0.0-alpha.3
       assert-never: 1.4.0
       babel-import-util: 2.1.1
       ember-cli-babel: 7.26.11
@@ -4743,6 +4780,41 @@ snapshots:
       minimatch: 3.1.2
       pkg-entry-points: 1.1.1
       resolve-package-path: 4.0.3
+      semver: 7.7.1
+      typescript-memoize: 1.1.1
+    transitivePeerDependencies:
+      - supports-color
+
+  '@embroider/shared-internals@2.9.0':
+    dependencies:
+      babel-import-util: 2.1.1
+      debug: 4.4.0
+      ember-rfc176-data: 0.3.18
+      fs-extra: 9.1.0
+      is-subdir: 1.2.0
+      js-string-escape: 1.0.1
+      lodash: 4.17.21
+      minimatch: 3.1.2
+      pkg-entry-points: 1.1.1
+      resolve-package-path: 4.0.3
+      semver: 7.7.1
+      typescript-memoize: 1.1.1
+    transitivePeerDependencies:
+      - supports-color
+
+  '@embroider/shared-internals@3.0.0-alpha.3':
+    dependencies:
+      babel-import-util: 2.1.1
+      debug: 4.4.0
+      ember-rfc176-data: 0.3.18
+      fs-extra: 9.1.0
+      is-subdir: 1.2.0
+      js-string-escape: 1.0.1
+      lodash: 4.17.21
+      minimatch: 3.1.2
+      pkg-entry-points: 1.1.1
+      resolve-package-path: 4.0.3
+      resolve.exports: 2.0.3
       semver: 7.7.1
       typescript-memoize: 1.1.1
     transitivePeerDependencies:
@@ -5311,7 +5383,7 @@ snapshots:
   '@warp-drive/build-config@0.0.0':
     dependencies:
       '@embroider/addon-shim': 1.9.0
-      '@embroider/macros': 1.16.10
+      '@embroider/macros': 1.16.11
       babel-import-util: 2.1.1
       broccoli-funnel: 3.0.8
       semver: 7.7.1
@@ -5322,7 +5394,7 @@ snapshots:
   '@warp-drive/build-config@0.0.0-alpha.48':
     dependencies:
       '@embroider/addon-shim': 1.9.0
-      '@embroider/macros': 1.16.10
+      '@embroider/macros': 1.16.11
       babel-import-util: 2.1.1
       broccoli-funnel: 3.0.8
       semver: 7.7.1
@@ -5333,7 +5405,7 @@ snapshots:
   '@warp-drive/build-config@5.4.0-alpha.134':
     dependencies:
       '@embroider/addon-shim': 1.9.0
-      '@embroider/macros': 1.16.10
+      '@embroider/macros': 1.16.11
       babel-import-util: 2.1.1
       broccoli-funnel: 3.0.8
       semver: 7.7.1
@@ -5343,7 +5415,7 @@ snapshots:
 
   '@warp-drive/core-types@0.0.0':
     dependencies:
-      '@embroider/macros': 1.16.10
+      '@embroider/macros': 1.16.11
       '@warp-drive/build-config': 0.0.0
     transitivePeerDependencies:
       - '@glint/template'
@@ -5367,7 +5439,7 @@ snapshots:
       '@ember-data/request': 5.4.0-alpha.134(@warp-drive/core-types@0.0.0)
       '@ember-data/request-utils': 5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1))
       '@ember-data/store': 5.4.0-alpha.134(@ember-data/request-utils@5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)))(@ember-data/request@5.4.0-alpha.134(@warp-drive/core-types@0.0.0))(@ember-data/tracking@5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)))(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1))
-      '@embroider/macros': 1.16.10
+      '@embroider/macros': 1.16.11
       '@warp-drive/build-config': 5.4.0-alpha.134
       '@warp-drive/core-types': 0.0.0
     transitivePeerDependencies:
@@ -5387,7 +5459,7 @@ snapshots:
       '@ember-data/request': 5.4.0-alpha.134(@warp-drive/core-types@0.0.0)
       '@ember-data/store': 5.4.0-alpha.134(@ember-data/request-utils@5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)))(@ember-data/request@5.4.0-alpha.134(@warp-drive/core-types@0.0.0))(@ember-data/tracking@5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)))(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1))
       '@ember-data/tracking': 5.4.0-alpha.134(@warp-drive/core-types@0.0.0)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1))
-      '@embroider/macros': 1.16.10
+      '@embroider/macros': 1.16.11
       '@warp-drive/build-config': 0.0.0
       '@warp-drive/core-types': 0.0.0
       ember-source: 6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.97.1)
@@ -6086,8 +6158,8 @@ snapshots:
       '@babel/plugin-proposal-private-methods': 7.18.6(@babel/core@7.26.7)
       '@babel/plugin-transform-class-static-block': 7.26.0(@babel/core@7.26.7)
       '@babel/preset-env': 7.26.7(@babel/core@7.26.7)
-      '@embroider/macros': 1.16.10
-      '@embroider/shared-internals': 2.8.1
+      '@embroider/macros': 1.16.11
+      '@embroider/shared-internals': 2.9.0
       babel-loader: 8.4.1(@babel/core@7.26.7)(webpack@5.97.1)
       babel-plugin-ember-modules-api-polyfill: 3.5.0
       babel-plugin-ember-template-compilation: 2.3.0
@@ -7635,6 +7707,8 @@ snapshots:
   resolve-package-path@4.0.3:
     dependencies:
       path-root: 0.1.1
+
+  resolve.exports@2.0.3: {}
 
   resolve@1.22.10:
     dependencies:
