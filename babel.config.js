@@ -3,7 +3,7 @@ import { setConfig } from '@warp-drive/build-config';
 
 const builtMacros = buildMacros({
 	configure(macrosInstance) {
-		setConfig(macrosInstance, './', { ___legacy_support: false });
+		setConfig(macrosInstance, { ___legacy_support: false });
 	},
 
 	// this is how you configure your own package
