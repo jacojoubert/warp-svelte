@@ -3,6 +3,9 @@
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
+	"imports": {
+		"#app/*": "./src/*"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -40,7 +43,7 @@
 		"@ember-data/rest": "^5.4.0-alpha.155",
 		"@ember-data/store": "5.4.0-alpha.155",
 		"@ember-data/tracking": "5.4.0-alpha.155",
-		"@embroider/macros": "1.17.0-alpha.5",
+		"@embroider/macros": "1.17.1",
 		"@warp-drive/build-config": "^0.0.0",
 		"@warp-drive/diagnostic": "0.0.0-alpha.141",
 		"@warp-drive/experiments": "0.1.0-alpha.155",
