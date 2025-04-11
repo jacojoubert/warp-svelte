@@ -1,0 +1,17 @@
+diff --git a/dist/index.js b/dist/index.js
+index 3de62dff1759a109e1d3a3263291d9a3406ab79a..e763fa04e1deee56d1d0fad630cbd4709aea4acd 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -675,8 +675,10 @@ function recastMacrosConfig(macros) {
+   }
+   return macros;
+ }
+-function setConfig(context, appRoot, config) {
+-  const macros = recastMacrosConfig(_MacrosConfig.for(context, appRoot));
++function setConfig(context, appRoot, _config) {
++  const macros = arguments.length === 2 ? context : recastMacrosConfig(_MacrosConfig.for(context, appRoot));
++  const config = (arguments.length === 2 ? appRoot : _config) || {};
++
+   const isLegacySupport = config.___legacy_support;
+   const hasDeprecatedConfig = isLegacySupport && Object.keys(config).length > 1;
+   const hasInitiatedConfig = macros.globalConfig['WarpDrive'];

@@ -5,8 +5,6 @@ import babel from 'vite-plugin-babel';
 export default defineConfig({
 	plugins: [
 		sveltekit(),
-		babel({
-			filter: /\.js$/
-		})
+		babel({})
 	]
 });
