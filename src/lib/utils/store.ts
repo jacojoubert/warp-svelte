@@ -11,7 +11,7 @@ import { JSONAPICache } from '@warp-drive/json-api';
 import { CacheHandler } from '@ember-data/store';
 
 import { setupSignals } from '@warp-drive/core/configure';
-import { buildSignalConfig } from './signals.svelte';
+import { buildSignalConfig } from './signals.js';
 
 setupSignals(buildSignalConfig);
 

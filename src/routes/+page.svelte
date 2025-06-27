@@ -1,5 +1,5 @@
 <script lang="ts">
-	import store from '$lib/utils/store.svelte';
+	import store from '$lib/utils/store';
 
 	import Pretender from 'pretender';
 
@@ -33,25 +33,22 @@
 			data: [
 				{
 					type: 'user',
-					id: '1',
-					attributes: { name: 'John Doe updated', email: 'john.doe@example.com', age: 30 }
+					id: request.params.id,
+					attributes: { name: 'New name', email: 'new@email.com', age: 30 }
 				}
 			]
 		};
 		return [200, { 'Content-Type': 'application/json' }, JSON.stringify(user)];
 	});
 
-	let users = $state<User[]>([]);
-
 	const fetchData = async function () {
 		const response = await store.request({
 			url: 'users'
 		});
-		users = response.content.data;
 		return response.content.data;
 	};
 
-	const fetchUser = async function (id: string) {
+	const fetchUpdatedUser = async function (id: string) {
 		const response = await store.request({
 			url: `users/${id}`
 		});
@@ -65,20 +62,15 @@
 	loading...
 {:then users: User[]}
 	{#each users as user}
-		<p>{user.name}</p>
-		<button onclick={() => fetchUser(user.id)}>Update</button>
+		<p>
+			{user.name}
+			<button onclick={() => fetchUpdatedUser(user.id)}>Update</button>
+		</p>
 	{/each}
+
+	<button
+		onclick={() => {
+			console.log([users[0].name, users[1].name]);
+		}}>Log</button
+	>
 {/await}
-
-<hr />
-
-{#each users as user}
-	<p>{user.name}</p>
-	<button onclick={() => fetchUser(user.id)}>Update</button>
-{/each}
-
-<button
-	onclick={() => {
-		console.log(users[0].name);
-	}}>Log</button
->
