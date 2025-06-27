@@ -7,9 +7,11 @@ import {
 } from '@warp-drive/core/reactive';
 import type { CacheCapabilitiesManager, ResourceKey } from '@warp-drive/core/types';
 import { JSONAPICache } from '@warp-drive/json-api';
+// import { CacheHandler } from '@warp-drive/core/store';
+import { CacheHandler } from '@ember-data/store';
 
 class AppStore extends Store {
-	requestManager = new RequestManager().use([Fetch]);
+	requestManager = new RequestManager().use([Fetch]).useCache(CacheHandler);
 
 	createSchemaService() {
 		const schema = new SchemaService();

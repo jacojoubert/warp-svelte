@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@ember-data/store':
+        specifier: 5.5.0
+        version: 5.5.0(@ember-data/request-utils@5.5.0(@ember-data/request@5.5.0(@ember/test-waiters@4.1.0)(@warp-drive/core-types@5.5.0))(@warp-drive/core-types@5.5.0))(@ember-data/request@5.5.0(@ember/test-waiters@4.1.0)(@warp-drive/core-types@5.5.0))(@warp-drive/core-types@5.5.0)
       '@embroider/macros':
         specifier: 1.18.0
         version: 1.18.0
@@ -29,6 +32,9 @@ importers:
       eslint-plugin-warp-drive:
         specifier: 0.0.2-alpha.161
         version: 0.0.2-alpha.161
+      pretender:
+        specifier: 3.4.7
+        version: 3.4.7
       vite-plugin-babel:
         specifier: ^1.3.0
         version: 1.3.0(@babel/core@7.26.7)(vite@6.2.6(@types/node@22.13.1)(terser@5.37.0))
@@ -633,8 +639,47 @@ packages:
     resolution: {integrity: sha512-t8kDRGrKXyp6+tjUh7hw2RLyclsW4TRoRvRHtSyAX9Bb5ldlFh+90YAYY6awRXrlB4G5G2izNeGySpATlFzmOg==}
     engines: {node: '>=6.9.0'}
 
+  '@ember-data/request-utils@5.5.0':
+    resolution: {integrity: sha512-tObMa2LIYqQ+QPNasbv4UNN44t5r/z5It2nuhcG2m04nJRBnOGvT0HPRwvdznANRNSDEv9L4QwRCrvIW+xbOwQ==}
+    engines: {node: '>= 18.20.8'}
+    peerDependencies:
+      '@ember-data/request': 5.5.0
+      '@ember/string': ^3.1.1 || ^4.0.0
+      '@warp-drive/core-types': 5.5.0
+      ember-inflector: ^4.0.2 || ^5.0.0 || ^6.0.0
+    peerDependenciesMeta:
+      '@ember/string':
+        optional: true
+      ember-inflector:
+        optional: true
+
+  '@ember-data/request@5.5.0':
+    resolution: {integrity: sha512-Omu39FbKiDylq8PVnKnXsjljWa6qIyQx65O0hNAasNi2rV1Uhv04g0UBZ3L0L+7R6Od8n1/9aqbrcfK/oNEhHA==}
+    engines: {node: '>= 18.20.8'}
+    peerDependencies:
+      '@ember/test-waiters': ^3.1.0 || ^4.0.0
+      '@warp-drive/core-types': 5.5.0
+
   '@ember-data/rfc395-data@0.0.4':
     resolution: {integrity: sha512-tGRdvgC9/QMQSuSuJV45xoyhI0Pzjm7A9o/MVVA3HakXIImJbbzx/k/6dO9CUEQXIyS2y0fW6C1XaYOG7rY0FQ==}
+
+  '@ember-data/store@5.5.0':
+    resolution: {integrity: sha512-4Oa3ObaqkSZ0ESRuLcITn1fmXdhkbcsvfFskH3sh4VmQW1kylTgS7qlU5n2nJE7GqMw43IM2ta/s1F0DFKC9Vw==}
+    engines: {node: '>= 18.20.8'}
+    peerDependencies:
+      '@ember-data/request': 5.5.0
+      '@ember-data/request-utils': 5.5.0
+      '@ember-data/tracking': 5.5.0
+      '@warp-drive/core-types': 5.5.0
+      ember-source: 3.28.12 || ^4.0.4 || ^5.0.0 || ^6.0.0
+    peerDependenciesMeta:
+      '@ember-data/tracking':
+        optional: true
+      ember-source:
+        optional: true
+
+  '@ember/test-waiters@4.1.0':
+    resolution: {integrity: sha512-qRFA0OumYv7/C3hmx4ETC2dlPzyD549D+naPhcrnV2xCnc3AZlKouWyoFnNF+Cje918kRp9aEefVgV3vmGL5Bg==}
 
   '@embroider/addon-shim@1.9.0':
     resolution: {integrity: sha512-fMzayl/licUL8VRAy4qXROKcYvHwUbV8aTh4m97L5/MRuVpxbcAy92DGGTqx5OBKCSQN3gMg+sUKeE6AviefpQ==}
@@ -1127,6 +1172,10 @@ packages:
   '@warp-drive/build-config@5.6.0-alpha.14':
     resolution: {integrity: sha512-K2PWLW+CYPO4DCxcbmOlYa60c/8QwvazkRieJiW4wBBfbiYawGwEH1hi731xOL/wxKAF71lD7XEDHT6+ftUmpg==}
 
+  '@warp-drive/core-types@5.5.0':
+    resolution: {integrity: sha512-PWc3QI9Ykc6zqGH0UUEuSthIaPN60WjKBUsievhD4YB5sjMVqRFIawrrD1Z9SOd2cgmidAJWDNT/zWsi7OI2OQ==}
+    engines: {node: '>= 18.20.8'}
+
   '@warp-drive/core@5.6.0-alpha.14':
     resolution: {integrity: sha512-WZhCHd/ERcbtT5LIvPYYXEs2Ojrt90KDVkXUPeZ9hex5RA/p112BdcHImUpt85rDBnCEAdOZl+lMO8b4eoGKWQ==}
 
@@ -1562,6 +1611,9 @@ packages:
   esutils@2.0.3:
     resolution: {integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==}
     engines: {node: '>=0.10.0'}
+
+  fake-xml-http-request@2.1.2:
+    resolution: {integrity: sha512-HaFMBi7r+oEC9iJNpc3bvcW7Z7iLmM26hPDmlb0mFwyANSsOQAtJxbdWsXITKOzZUyMYK0zYCv3h5yDj9TsiXg==}
 
   fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
@@ -2097,6 +2149,9 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
+  pretender@3.4.7:
+    resolution: {integrity: sha512-jkPAvt1BfRi0RKamweJdEcnjkeu7Es8yix3bJ+KgBC5VpG/Ln4JE3hYN6vJym4qprm8Xo5adhWpm3HCoft1dOw==}
+
   prettier-plugin-svelte@3.3.3:
     resolution: {integrity: sha512-yViK9zqQ+H2qZD1w/bH7W8i+bVfKrD8GIFjkFe4Thl6kCT9SlAsXVNmt3jCvQOCsnOhcvYgsoVlRV/Eu6x5nNw==}
     peerDependencies:
@@ -2206,6 +2261,9 @@ packages:
     resolution: {integrity: sha512-sBDUoxZEaqLu9QeNalL8v3jw6WjPku4wfZGyTU7l7m1oC+rpRihXc/n/H+4148ZkGz5Xli8CHMns//fFGKvpIQ==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
+
+  route-recognizer@0.3.4:
+    resolution: {integrity: sha512-2+MhsfPhvauN1O8KaXpXAOfR/fwe8dnUXVM+xw7yt40lJRfPVQxV6yryZm0cgRvAj5fMF/mdRZbL2ptwbs5i2g==}
 
   rsvp@3.2.1:
     resolution: {integrity: sha512-Rf4YVNYpKjZ6ASAmibcwTNciQ5Co5Ztq6iZPEykHpkoflnD/K5ryE/rHehFsTm4NJj8nKDhbi3eKBWGogmNnkg==}
@@ -3228,7 +3286,46 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
+  '@ember-data/request-utils@5.5.0(@ember-data/request@5.5.0(@ember/test-waiters@4.1.0)(@warp-drive/core-types@5.5.0))(@warp-drive/core-types@5.5.0)':
+    dependencies:
+      '@ember-data/request': 5.5.0(@ember/test-waiters@4.1.0)(@warp-drive/core-types@5.5.0)
+      '@embroider/macros': 1.18.0
+      '@warp-drive/build-config': 5.5.0
+      '@warp-drive/core-types': 5.5.0
+    transitivePeerDependencies:
+      - '@glint/template'
+      - supports-color
+
+  '@ember-data/request@5.5.0(@ember/test-waiters@4.1.0)(@warp-drive/core-types@5.5.0)':
+    dependencies:
+      '@ember/test-waiters': 4.1.0
+      '@embroider/macros': 1.18.0
+      '@warp-drive/build-config': 5.5.0
+      '@warp-drive/core-types': 5.5.0
+    transitivePeerDependencies:
+      - '@glint/template'
+      - supports-color
+
   '@ember-data/rfc395-data@0.0.4': {}
+
+  '@ember-data/store@5.5.0(@ember-data/request-utils@5.5.0(@ember-data/request@5.5.0(@ember/test-waiters@4.1.0)(@warp-drive/core-types@5.5.0))(@warp-drive/core-types@5.5.0))(@ember-data/request@5.5.0(@ember/test-waiters@4.1.0)(@warp-drive/core-types@5.5.0))(@warp-drive/core-types@5.5.0)':
+    dependencies:
+      '@ember-data/request': 5.5.0(@ember/test-waiters@4.1.0)(@warp-drive/core-types@5.5.0)
+      '@ember-data/request-utils': 5.5.0(@ember-data/request@5.5.0(@ember/test-waiters@4.1.0)(@warp-drive/core-types@5.5.0))(@warp-drive/core-types@5.5.0)
+      '@embroider/macros': 1.18.0
+      '@warp-drive/build-config': 5.5.0
+      '@warp-drive/core-types': 5.5.0
+    transitivePeerDependencies:
+      - '@glint/template'
+      - supports-color
+
+  '@ember/test-waiters@4.1.0':
+    dependencies:
+      '@embroider/addon-shim': 1.9.0
+      '@embroider/macros': 1.18.0
+    transitivePeerDependencies:
+      - '@glint/template'
+      - supports-color
 
   '@embroider/addon-shim@1.9.0':
     dependencies:
@@ -3692,6 +3789,14 @@ snapshots:
       '@embroider/macros': 1.18.0
       babel-import-util: 2.1.1
       semver: 7.7.1
+    transitivePeerDependencies:
+      - '@glint/template'
+      - supports-color
+
+  '@warp-drive/core-types@5.5.0':
+    dependencies:
+      '@embroider/macros': 1.18.0
+      '@warp-drive/build-config': 5.5.0
     transitivePeerDependencies:
       - '@glint/template'
       - supports-color
@@ -4288,6 +4393,8 @@ snapshots:
 
   esutils@2.0.3: {}
 
+  fake-xml-http-request@2.1.2: {}
+
   fast-deep-equal@3.1.3: {}
 
   fast-glob@3.3.3:
@@ -4813,6 +4920,11 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
+  pretender@3.4.7:
+    dependencies:
+      fake-xml-http-request: 2.1.2
+      route-recognizer: 0.3.4
+
   prettier-plugin-svelte@3.3.3(prettier@3.5.3)(svelte@5.25.12):
     dependencies:
       prettier: 3.5.3
@@ -4932,6 +5044,8 @@ snapshots:
       '@rollup/rollup-win32-ia32-msvc': 4.34.2
       '@rollup/rollup-win32-x64-msvc': 4.34.2
       fsevents: 2.3.3
+
+  route-recognizer@0.3.4: {}
 
   rsvp@3.2.1: {}
 
