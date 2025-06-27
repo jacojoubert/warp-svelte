@@ -31,9 +31,7 @@
 		"vite": "^6.2.6"
 	},
 	"dependencies": {
-		"@ember-data/store": "5.5.0",
 		"@embroider/macros": "1.18.0",
-		"@warp-drive/build-config": "5.5.0",
 		"@warp-drive/core": "5.6.0-alpha.14",
 		"@warp-drive/json-api": "5.6.0-alpha.14",
 		"@warp-drive/utilities": "5.6.0-alpha.14",
