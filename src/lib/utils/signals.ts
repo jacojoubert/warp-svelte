@@ -1,19 +1,33 @@
-import * as $ from 'svelte/internal/client';
+import { createSubscriber } from 'svelte/reactivity';
 
 const createSignal = (obj: object, key: string | symbol) => {
-	console.log('createSignal', obj, key);
-	const signal = $.state(1);
+	let value = 1;
+	let update: () => void;
+
+	const subscribe = createSubscriber((update_function) => {
+		update = update_function;
+	});
+
+	const signal = {
+		get value() {
+			subscribe();
+			return value;
+		},
+		set value(new_value) {
+			value = new_value;
+			update();
+		}
+	};
+
 	return signal;
 };
 
-const consumeSignal = (signal) => {
-	console.log('consumeSignal', signal);
-	return $.get(signal);
+const consumeSignal = (signal: ReturnType<typeof createSignal>) => {
+	return signal.value;
 };
 
-const notifySignal = (signal) => {
-	console.log('notifySignal', signal);
-	return $.set(signal, $.get(signal) + 1, true);
+const notifySignal = (signal: ReturnType<typeof createSignal>) => {
+	return (signal.value = signal.value + 1);
 };
 
 const buildSignalConfig = () => {

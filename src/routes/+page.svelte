@@ -1,11 +1,14 @@
 <script lang="ts">
 	import store from '$lib/utils/store';
+	import { json } from '@sveltejs/kit';
 
 	import Pretender from 'pretender';
 
 	interface User {
-		id: Number;
-		name: String;
+		id: string;
+		name: string;
+		email: string;
+		age: number;
 	}
 
 	const server = new Pretender();
@@ -41,12 +44,13 @@
 		return [200, { 'Content-Type': 'application/json' }, JSON.stringify(user)];
 	});
 
-	const fetchData = async function () {
-		const response = await store.request({
+	const users: Promise<User[]> = store
+		.request({
 			url: 'users'
+		})
+		.then((response) => {
+			return response.content.data;
 		});
-		return response.content.data;
-	};
 
 	const fetchUpdatedUser = async function (id: string) {
 		const response = await store.request({
@@ -58,19 +62,20 @@
 
 <h1>Warp Drive Testing App</h1>
 
-{#await fetchData()}
+{#await users}
 	loading...
-{:then users: User[]}
-	{#each users as user}
+{:then users}
+	{#each users as user (user.id)}
 		<p>
 			{user.name}
 			<button onclick={() => fetchUpdatedUser(user.id)}>Update</button>
 		</p>
 	{/each}
-
 	<button
 		onclick={() => {
-			console.log([users[0].name, users[1].name]);
-		}}>Log</button
+			console.log(JSON.parse(JSON.stringify(users)));
+		}}
 	>
+		Log
+	</button>
 {/await}
