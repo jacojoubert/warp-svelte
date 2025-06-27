@@ -1,6 +1,6 @@
-import { setBuildURLConfig } from '@ember-data/request-utils';
+// import { setBuildURLConfig } from '@warp-drive/utilities';
 
-setBuildURLConfig({
-	host: null,
-	namespace: 'api/v1'
-});
+// setBuildURLConfig({
+// 	host: null,
+// 	namespace: 'api/v1'
+// });

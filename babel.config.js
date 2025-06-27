@@ -1,9 +1,9 @@
-import { buildMacros } from '@embroider/macros/babel';
 import { setConfig } from '@warp-drive/build-config';
+import { buildMacros } from '@embroider/macros/babel';
 
 const builtMacros = buildMacros({
-	configure(macrosInstance) {
-		setConfig(macrosInstance, './', { ___legacy_support: false });
+	configure(config) {
+		setConfig(config, { compatWith: '5.6' });
 	},
 
 	// this is how you configure your own package
@@ -24,19 +24,14 @@ export default function (api) {
 			[
 				'module:babel-plugin-debug-macros',
 				{
-					flags: [
-						{
-							source: '@glimmer/env',
-							flags: { DEBUG: true }
-						}
-					],
+					flags: [],
 					debugTools: {
 						isDebug: true,
 						source: '@ember/debug',
 						assertPredicateIndex: 1
 					}
 				},
-				'ember-data-specific-macros-stripping'
+				'ember-data-specific-macros-stripping-test'
 			],
 			...builtMacros.babelMacros
 		]

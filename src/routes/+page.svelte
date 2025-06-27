@@ -1,15 +1,11 @@
 <script>
-	import manager from '../utils/request-manager';
-	import { browser } from '$app/environment';
+	import store from '$lib/utils/store';
 
 	const fetchData = async function () {
-		if (!browser) {
-			return;
-		}
-		const response = await manager.request({
-			url: `/users`
+		const response = await store.request({
+			url: 'users'
 		});
-		debugger;
+		console.log(response);
 	};
 </script>
 
