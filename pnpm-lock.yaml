@@ -20,6 +20,9 @@ importers:
       '@warp-drive/core':
         specifier: 5.6.0-alpha.14
         version: 5.6.0-alpha.14
+      '@warp-drive/core-types':
+        specifier: 5.5.0
+        version: 5.5.0
       '@warp-drive/json-api':
         specifier: 5.6.0-alpha.14
         version: 5.6.0-alpha.14(@warp-drive/core@5.6.0-alpha.14)

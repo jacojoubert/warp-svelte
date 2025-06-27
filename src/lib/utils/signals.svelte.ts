@@ -35,6 +35,10 @@ const buildSignalConfig = () => {
 		createSignal,
 		consumeSignal,
 		notifySignal,
+		createMemo: (obj, key, fn) => {
+			const m = $derived.by(fn);
+			return () => m;
+		},
 		willSyncFlushWatchers: () => false
 	};
 };

@@ -11,7 +11,8 @@ import { JSONAPICache } from '@warp-drive/json-api';
 import { CacheHandler } from '@ember-data/store';
 
 import { setupSignals } from '@warp-drive/core/configure';
-import { buildSignalConfig } from './signals.js';
+import { buildSignalConfig } from './signals.svelte.js';
+import { Type } from '@warp-drive/core/types/symbols';
 // import { buildSignalConfig } from './signal-store.svelte.js';
 
 setupSignals(buildSignalConfig);
@@ -21,16 +22,34 @@ class AppStore extends Store {
 
 	createSchemaService() {
 		const schema = new SchemaService();
+
+		function concat(record: any, options: Record<string, unknown> | null, _prop: string): string {
+			if (!options) throw new Error(`options is required`);
+			const opts = options as { fields: string[]; separator?: string };
+			return opts.fields.map((field) => record[field]).join(opts.separator ?? '');
+		}
+
+		concat[Type] = 'concat';
+
+		schema.registerDerivation(concat);
+		registerDerivations(schema);
+
 		schema.registerResource({
 			type: 'user',
 			identity: { kind: '@id', name: 'id' },
 			fields: [
 				{ name: 'name', kind: 'field' },
 				{ name: 'email', kind: 'field' },
-				{ name: 'age', kind: 'field' }
+				{ name: 'age', kind: 'field' },
+				{
+					name: 'details',
+					type: 'concat',
+					options: { fields: ['email', 'age'], separator: ' ° ' },
+					kind: 'derived'
+				}
 			]
 		});
-		registerDerivations(schema);
+
 		return schema;
 	}
 

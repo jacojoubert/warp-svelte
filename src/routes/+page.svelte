@@ -67,7 +67,8 @@
 {:then users}
 	{#each users as user (user.id)}
 		<p>
-			{user.name}
+			{user.name} <br />
+			{user.details}
 			<button onclick={() => fetchUpdatedUser(user.id)}>Update</button>
 		</p>
 	{/each}
