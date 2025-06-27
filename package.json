@@ -35,7 +35,6 @@
 		"@embroider/macros": "1.18.0",
 		"@warp-drive/build-config": "5.5.0",
 		"@warp-drive/core": "5.6.0-alpha.14",
-		"@warp-drive/core-types": "5.5.0",
 		"@warp-drive/json-api": "5.6.0-alpha.14",
 		"@warp-drive/utilities": "5.6.0-alpha.14",
 		"babel-plugin-debug-macros": "^1.0.2",
