@@ -10,11 +10,25 @@ import { JSONAPICache } from '@warp-drive/json-api';
 // import { CacheHandler } from '@warp-drive/core/store';
 import { CacheHandler } from '@ember-data/store';
 
+import { setupSignals } from '@warp-drive/core/configure';
+import { buildSignalConfig } from './signals.svelte';
+
+setupSignals(buildSignalConfig);
+
 class AppStore extends Store {
 	requestManager = new RequestManager().use([Fetch]).useCache(CacheHandler);
 
 	createSchemaService() {
 		const schema = new SchemaService();
+		schema.registerResource({
+			type: 'user',
+			identity: { kind: '@id', name: 'id' },
+			fields: [
+				{ name: 'name', kind: 'field' },
+				{ name: 'email', kind: 'field' },
+				{ name: 'age', kind: 'field' }
+			]
+		});
 		registerDerivations(schema);
 		return schema;
 	}
