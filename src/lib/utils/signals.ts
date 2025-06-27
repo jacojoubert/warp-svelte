@@ -2,7 +2,7 @@ import * as $ from 'svelte/internal/client';
 
 const createSignal = (obj: object, key: string | symbol) => {
 	console.log('createSignal', obj, key);
-	const signal = $.state(obj);
+	const signal = $.state(1);
 	return signal;
 };
 
