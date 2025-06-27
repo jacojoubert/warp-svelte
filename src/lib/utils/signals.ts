@@ -4,8 +4,8 @@ const createSignal = (obj: object, key: string | symbol) => {
 	let value = 1;
 	let update: () => void;
 
-	const subscribe = createSubscriber((update_function) => {
-		update = update_function;
+	const subscribe = createSubscriber((updateFn) => {
+		update = updateFn;
 	});
 
 	const signal = {
