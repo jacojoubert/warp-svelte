@@ -27,7 +27,7 @@ const consumeSignal = (signal: ReturnType<typeof createSignal>) => {
 };
 
 const notifySignal = (signal: ReturnType<typeof createSignal>) => {
-	return (signal.value = signal.value + 1);
+	return signal.value++;
 };
 
 const buildSignalConfig = () => {
